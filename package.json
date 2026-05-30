@@ -1,0 +1,19 @@
+{
+  "name": "urano-cloud-sync",
+  "version": "1.0.0",
+  "description": "Sube archivos y capturas multimedia a tu bucket S3/R2 en caliente para reducir el coste de tokens del LLM de forma transparente.",
+  "main": "config.js",
+  "scripts": {
+    "deploy": "npx esbuild config.ts Plugins/**/*.ts --bundle --platform=node --outdir=dist --format=cjs --external:@core/*",
+    "build": "npm install --save-dev esbuild",
+    "urano-launch": "powershell -Command \"Compress-Archive -Path dist\\* -DestinationPath ($env:npm_package_name + '.zip') -Force\""
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.500.0",
+    "@aws-sdk/s3-request-presigner": "^3.500.0"
+  }
+}
