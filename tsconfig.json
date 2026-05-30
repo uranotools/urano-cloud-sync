@@ -14,5 +14,5 @@
       "@modules/*": ["*"]
     }
   },
-  "include": ["config.ts", "Plugins/**/*.ts", "../urano.d.ts"]
+  "include": ["config.ts", "Plugins/**/*.ts"]
 }
