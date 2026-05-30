@@ -53,7 +53,7 @@ export const UranoCloudSyncConfig = {
         },
         {
             name: 'URL_EXPIRATION_MINUTES',
-            type: 'text',
+            type: 'number',
             title: 'Caducidad de URLs firmadas (minutos)',
             description: 'Tiempo de validez de los enlaces generados. Default: 60'
         },
